@@ -1,38 +1,8 @@
-const planetArts = [
-  ["Mercury", "radial-gradient(circle at 50% 43%, #d8d1c6 0 7%, #8b8176 7.4% 13%, transparent 13.5%), radial-gradient(circle at 28% 22%, #fff 0 .4%, transparent .7%), radial-gradient(circle at 78% 29%, #fff 0 .35%, transparent .65%), #000"],
-  ["Venus", "radial-gradient(circle at 50% 43%, #ffe1a6 0 8%, #c98243 8.4% 15%, transparent 15.5%), linear-gradient(12deg, transparent 0 46%, rgba(255,255,255,.18) 46.3% 48.2%, transparent 48.5%), radial-gradient(circle at 82% 25%, #fff 0 .35%, transparent .65%), #000"],
-  ["Earth", "radial-gradient(circle at 50% 43%, #8ed7ff 0 8%, #1763c9 8.4% 15%, transparent 15.5%), radial-gradient(ellipse at 45% 39%, #68d391 0 4%, transparent 4.4%), radial-gradient(ellipse at 56% 48%, #f5f5f7 0 3%, transparent 3.4%), #000"],
-  ["Mars", "radial-gradient(circle at 50% 43%, #ff9a62 0 8%, #9f351f 8.4% 14%, transparent 14.5%), radial-gradient(circle at 44% 39%, rgba(60,15,8,.72) 0 2%, transparent 2.4%), radial-gradient(circle at 80% 72%, #fff 0 .36%, transparent .62%), #000"],
-  ["Jupiter", "radial-gradient(circle at 50% 43%, #f0d2a0 0 11%, #a76d42 11.4% 18%, transparent 18.5%), linear-gradient(0deg, transparent 0 38%, rgba(95,50,28,.75) 38.4% 40%, transparent 40.4% 46%, rgba(255,255,255,.42) 46.4% 48%, transparent 48.4% 55%, rgba(130,74,35,.7) 55.4% 57%, transparent 57.4%), #000"],
-  ["Saturn", "radial-gradient(circle at 50% 43%, #ecd09b 0 8%, #b58448 8.4% 14%, transparent 14.5%), radial-gradient(ellipse at 50% 43%, transparent 0 17%, rgba(235,210,158,.9) 17.4% 18.8%, transparent 19.2%), #000"],
-  ["Uranus", "radial-gradient(circle at 50% 43%, #a8fff4 0 8%, #48a9b9 8.4% 14.5%, transparent 15%), radial-gradient(ellipse at 50% 43%, transparent 0 18%, rgba(190,255,250,.65) 18.4% 19.2%, transparent 19.6%), #000"],
-  ["Neptune", "radial-gradient(circle at 50% 43%, #87a7ff 0 8%, #2344c7 8.4% 14.5%, transparent 15%), radial-gradient(ellipse at 54% 40%, rgba(255,255,255,.7) 0 2.5%, transparent 2.9%), radial-gradient(circle at 20% 34%, #fff 0 .35%, transparent .65%), #000"]
-];
-
 function imageTiles(folder, prefix, count) {
   return Array.from({ length: count }, (_, index) => ({
     image: `images/${folder}/${prefix}-${String(index + 1).padStart(2, "0")}.png`
   }));
 }
-
-const constellationArts = [
-  "linear-gradient(28deg, transparent 0 44%, rgba(255,255,255,.55) 44.3% 44.7%, transparent 45%), radial-gradient(circle at 35% 34%, #fff 0 .9%, transparent 1.2%), radial-gradient(circle at 48% 42%, #fff 0 .75%, transparent 1%), radial-gradient(circle at 63% 58%, #fff 0 .85%, transparent 1.15%), #000",
-  "linear-gradient(152deg, transparent 0 42%, rgba(255,255,255,.48) 42.3% 42.7%, transparent 43%), radial-gradient(circle at 28% 62%, #fff 0 .8%, transparent 1.1%), radial-gradient(circle at 41% 47%, #fff 0 .7%, transparent 1%), radial-gradient(circle at 72% 30%, #fff 0 .95%, transparent 1.25%), #000",
-  "linear-gradient(90deg, transparent 0 35%, rgba(255,255,255,.45) 35.3% 35.7%, transparent 36%), linear-gradient(35deg, transparent 0 54%, rgba(255,255,255,.45) 54.3% 54.7%, transparent 55%), radial-gradient(circle at 34% 43%, #fff 0 .8%, transparent 1.1%), radial-gradient(circle at 62% 43%, #fff 0 .8%, transparent 1.1%), radial-gradient(circle at 49% 60%, #fff 0 .9%, transparent 1.2%), #000",
-  "linear-gradient(118deg, transparent 0 48%, rgba(255,255,255,.5) 48.3% 48.7%, transparent 49%), radial-gradient(circle at 38% 28%, #fff 0 .75%, transparent 1%), radial-gradient(circle at 45% 46%, #fff 0 .9%, transparent 1.2%), radial-gradient(circle at 58% 70%, #fff 0 .7%, transparent 1%), #000",
-  "linear-gradient(20deg, transparent 0 46%, rgba(255,255,255,.45) 46.3% 46.7%, transparent 47%), linear-gradient(145deg, transparent 0 50%, rgba(255,255,255,.38) 50.3% 50.7%, transparent 51%), radial-gradient(circle at 28% 52%, #fff 0 .7%, transparent 1%), radial-gradient(circle at 50% 40%, #fff 0 .95%, transparent 1.25%), radial-gradient(circle at 72% 52%, #fff 0 .7%, transparent 1%), #000",
-  "linear-gradient(72deg, transparent 0 43%, rgba(255,255,255,.42) 43.3% 43.7%, transparent 44%), radial-gradient(circle at 52% 24%, #fff 0 .8%, transparent 1.1%), radial-gradient(circle at 44% 43%, #fff 0 .7%, transparent 1%), radial-gradient(circle at 38% 65%, #fff 0 .9%, transparent 1.2%), #000",
-  "linear-gradient(160deg, transparent 0 45%, rgba(255,255,255,.46) 45.3% 45.7%, transparent 46%), radial-gradient(circle at 70% 34%, #fff 0 .9%, transparent 1.2%), radial-gradient(circle at 55% 45%, #fff 0 .7%, transparent 1%), radial-gradient(circle at 35% 66%, #fff 0 .8%, transparent 1.1%), #000",
-  "linear-gradient(45deg, transparent 0 47%, rgba(255,255,255,.42) 47.3% 47.7%, transparent 48%), linear-gradient(135deg, transparent 0 47%, rgba(255,255,255,.42) 47.3% 47.7%, transparent 48%), radial-gradient(circle at 36% 36%, #fff 0 .75%, transparent 1%), radial-gradient(circle at 64% 36%, #fff 0 .75%, transparent 1%), radial-gradient(circle at 36% 64%, #fff 0 .75%, transparent 1%), radial-gradient(circle at 64% 64%, #fff 0 .75%, transparent 1%), #000",
-  "linear-gradient(12deg, transparent 0 48%, rgba(255,255,255,.5) 48.3% 48.7%, transparent 49%), radial-gradient(circle at 24% 44%, #fff 0 .8%, transparent 1.1%), radial-gradient(circle at 50% 50%, #fff 0 .9%, transparent 1.2%), radial-gradient(circle at 77% 57%, #fff 0 .7%, transparent 1%), #000",
-  "linear-gradient(98deg, transparent 0 46%, rgba(255,255,255,.42) 46.3% 46.7%, transparent 47%), radial-gradient(circle at 48% 29%, #fff 0 .9%, transparent 1.2%), radial-gradient(circle at 51% 49%, #fff 0 .7%, transparent 1%), radial-gradient(circle at 54% 70%, #fff 0 .8%, transparent 1.1%), #000",
-  "linear-gradient(132deg, transparent 0 46%, rgba(255,255,255,.45) 46.3% 46.7%, transparent 47%), radial-gradient(circle at 68% 26%, #fff 0 .8%, transparent 1.1%), radial-gradient(circle at 52% 48%, #fff 0 .95%, transparent 1.25%), radial-gradient(circle at 31% 72%, #fff 0 .7%, transparent 1%), #000",
-  "linear-gradient(0deg, transparent 0 50%, rgba(255,255,255,.38) 50.3% 50.7%, transparent 51%), linear-gradient(65deg, transparent 0 50%, rgba(255,255,255,.42) 50.3% 50.7%, transparent 51%), radial-gradient(circle at 40% 50%, #fff 0 .8%, transparent 1.1%), radial-gradient(circle at 60% 50%, #fff 0 .8%, transparent 1.1%), radial-gradient(circle at 50% 30%, #fff 0 .75%, transparent 1%), #000",
-  "linear-gradient(30deg, transparent 0 50%, rgba(255,255,255,.42) 50.3% 50.7%, transparent 51%), radial-gradient(circle at 33% 70%, #fff 0 .75%, transparent 1%), radial-gradient(circle at 48% 53%, #fff 0 .95%, transparent 1.25%), radial-gradient(circle at 66% 31%, #fff 0 .75%, transparent 1%), #000",
-  "linear-gradient(115deg, transparent 0 52%, rgba(255,255,255,.45) 52.3% 52.7%, transparent 53%), radial-gradient(circle at 60% 24%, #fff 0 .8%, transparent 1.1%), radial-gradient(circle at 52% 47%, #fff 0 .7%, transparent 1%), radial-gradient(circle at 42% 75%, #fff 0 .9%, transparent 1.2%), #000",
-  "linear-gradient(75deg, transparent 0 48%, rgba(255,255,255,.5) 48.3% 48.7%, transparent 49%), radial-gradient(circle at 44% 24%, #fff 0 .7%, transparent 1%), radial-gradient(circle at 50% 47%, #fff 0 .95%, transparent 1.25%), radial-gradient(circle at 58% 72%, #fff 0 .75%, transparent 1%), #000",
-  "linear-gradient(148deg, transparent 0 48%, rgba(255,255,255,.42) 48.3% 48.7%, transparent 49%), radial-gradient(circle at 72% 32%, #fff 0 .75%, transparent 1%), radial-gradient(circle at 52% 49%, #fff 0 .9%, transparent 1.2%), radial-gradient(circle at 29% 68%, #fff 0 .75%, transparent 1%), #000"
-];
 
 const collections = [
   {
@@ -43,9 +13,9 @@ const collections = [
   },
   {
     title: "Space",
-    count: 24,
+    count: 16,
     text: "#f5f5f7",
-    arts: imageTiles("space", "space", 24)
+    arts: imageTiles("space", "space", 16)
   },
   {
     title: "Art Deco",

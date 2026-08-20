@@ -37,7 +37,7 @@ http://localhost:8080
 
 - Catálogo visual en 2 columnas.
 - 6 colecciones.
-- 60 imágenes en total.
+- 52 imágenes en total.
 - Selector de idioma `ES / EN`.
 - Footer con `Términos`, `Privacidad`, `Contacto` y disclaimer de Apple.
 - Popups para la información legal sin sacar al usuario del catálogo.
@@ -49,7 +49,7 @@ http://localhost:8080
 | Colección | Imágenes | Carpeta |
 |---|---:|---|
 | Black | 6 | `images/black/` |
-| Space | 24 | `images/space/` |
+| Space | 16 | `images/space/` |
 | Art Deco | 6 | `images/art-deco/` |
 | Nippon | 12 | `images/nippon/` |
 | Matrix | 6 | `images/matrix/` |
@@ -108,7 +108,7 @@ images/racing/racing-06.png
 ```
 
 Las antiguas hojas de contacto usadas durante la generación ya se eliminaron.
-La carpeta `images/` debe contener sólo las 60 imágenes finales.
+La carpeta `images/` debe contener sólo las 52 imágenes finales.
 
 ## Estado actual
 
