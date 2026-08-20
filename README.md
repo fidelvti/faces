@@ -110,6 +110,76 @@ images/racing/racing-06.png
 Las antiguas hojas de contacto usadas durante la generación ya se eliminaron.
 La carpeta `images/` debe contener sólo las 52 imágenes finales.
 
+## Plan de promoción
+
+Objetivo: generar tráfico orgánico hacia la web desde vídeo corto, con una
+compra impulsiva de 0,99 € y el menor número posible de pasos entre descubrir
+una esfera y pagar.
+
+Canales iniciales:
+
+- TikTok
+- Instagram Reels
+- YouTube Shorts
+
+Crear una cuenta específica de marca para cada plataforma, usando el mismo
+nombre, avatar, bio corta y enlace principal hacia la web. La bio debe explicar
+el producto sin fricción:
+
+```text
+Apple Watch face designs. 0,99 €. Tap, pay, install.
+```
+
+Líneas de contenido a probar:
+
+- Vídeos muy cortos mostrando una esfera dentro del Apple Watch.
+- Comparativas rápidas: esfera por defecto vs. FACES.
+- Carruseles visuales de una colección completa.
+- Lanzamientos por colección: Black, Space, Art Deco, Nippon, Matrix, Racing.
+- Clips de temporada o tendencia: espacio, coches clásicos, estética japonesa,
+  minimalismo negro, retro computing.
+- Vídeos de satisfacción inmediata: elegir diseño, pagar con Apple Pay y llegar
+  a `Add Apple Watch Face`.
+
+Ideas de formato:
+
+- Primer segundo con el reloj ya en pantalla.
+- Fondo limpio, sin explicación larga.
+- Texto en pantalla muy breve: `This is an Apple Watch face`.
+- Cierre con precio claro: `0,99 €`.
+- CTA directo: `Link in bio`.
+- Reutilizar el mismo vídeo en TikTok, Reels y Shorts adaptando sólo caption y
+  hashtags.
+
+Hipótesis a validar:
+
+- Qué colección convierte mejor.
+- Si vende más una pieza individual o una colección con varias imágenes.
+- Si funciona mejor comunicar `0,99 €` al principio o al final.
+- Si el público responde más a estética Apple/OLED, lujo retro, espacio,
+  Japón/minimalismo o nostalgia informática.
+- Si los vídeos con muñeca/reloj real convierten mejor que los mockups.
+
+Métricas mínimas:
+
+- Visualizaciones por vídeo.
+- Porcentaje de retención en los primeros 2 segundos.
+- Clics al enlace de la bio.
+- Conversión de visita a compra.
+- Colección comprada.
+
+Rutina inicial:
+
+- Publicar 2-3 vídeos diarios durante 30 días.
+- Probar 3-5 hooks distintos por colección.
+- Mantener los vídeos que superen la media de retención y rehacer variaciones.
+- Convertir los vídeos ganadores en anuncios pagados pequeños si ya hay señal
+  de compra.
+
+Pendiente: investigar tácticas concretas para generar tráfico cualificado en
+TikTok, Instagram Reels y YouTube Shorts, incluyendo hooks, hashtags, creators,
+colaboraciones, tendencias visuales y posibles campañas de bajo presupuesto.
+
 ## Estado actual
 
 Esto todavía no vende ni instala esferas reales.
