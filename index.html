@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FACES</title>
+    <meta name="description" content="Colecciones visuales limpias diseñadas para Apple Watch.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Inicio de FACES">FACES</a>
+      <p data-i18n="tagline">Colecciones visuales diseñadas para Apple Watch.</p>
+      <div class="language-toggle" aria-label="Language">
+        <button class="active" type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="catalog" aria-label="Watch face collections" id="catalog"></section>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="footer-links" aria-label="Footer">
+        <button data-modal="terms" data-i18n="termsLink">Términos</button>
+        <button data-modal="privacy" data-i18n="privacyLink">Privacidad</button>
+        <button data-modal="contact" data-i18n="contactLink">Contacto</button>
+      </nav>
+      <p data-i18n="disclaimer">Apple Watch es una marca comercial de Apple Inc. FACES no está afiliada ni respaldada por Apple Inc.</p>
+    </footer>
+
+    <dialog class="modal" id="purchaseModal" aria-labelledby="purchaseTitle">
+      <button class="icon-close" data-close aria-label="Close">×</button>
+      <div class="purchase-layout">
+        <div class="watch small-watch" id="purchasePreview" aria-hidden="true"></div>
+        <div>
+          <p class="status" data-i18n="purchaseStatus">✓ Tuyo.</p>
+          <h2 id="purchaseTitle">Collection</h2>
+          <p class="modal-copy" data-i18n="purchaseCopy">Abre esta página en tu iPhone enlazado y añade la esfera al Apple Watch.</p>
+          <a class="add-face" href="#" aria-label="Añadir esfera al Apple Watch" data-i18n="addFace">Add Apple Watch Face</a>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="modal" id="infoModal" aria-labelledby="infoTitle">
+      <button class="icon-close" data-close aria-label="Close">×</button>
+      <h2 id="infoTitle"></h2>
+      <div id="infoBody"></div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
