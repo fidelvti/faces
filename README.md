@@ -197,6 +197,7 @@ Content-Type: application/vnd.apple.watchface
 
 - Sustituir `hello@faces.example` por un email real.
 - Completar aviso legal, términos, privacidad, desistimiento digital e IVA.
+- Conseguir que las URLs de los assets estén protegidas para evitar que se puedan descargar.
 
 ## Disclaimer
 
