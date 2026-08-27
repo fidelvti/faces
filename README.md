@@ -37,7 +37,7 @@ http://localhost:8080
 
 - Catálogo visual en 2 columnas.
 - 6 colecciones.
-- 44 imágenes en total.
+- 44 imágenes finales por colección y 44 previews web derivadas de los `.watchface`.
 - Selector de idioma `ES / EN`.
 - Footer con `Términos`, `Privacidad`, `Contacto` y disclaimer de Apple.
 - Popups para la información legal sin sacar al usuario del catálogo.
@@ -76,7 +76,8 @@ http://localhost:8080
     ├── art-deco/
     ├── nippon/
     ├── matrix/
-    └── racing/
+    ├── racing/
+    └── watchface-previews/
 ```
 
 ## Idiomas
@@ -96,7 +97,10 @@ Los textos están en el objeto `translations` dentro de `script.js`.
 
 ## Imágenes
 
-Cada imagen es un PNG cuadrado usado como fondo dentro del preview del reloj.
+Las carpetas principales de `images/` contienen los PNG originales de cada
+colección. La carpeta `images/watchface-previews/` contiene copias exportadas
+desde los JPG internos de los `.watchface`; esas son las que usa la web para que
+el preview se parezca a lo que se instala.
 
 Convención de nombres:
 
@@ -115,7 +119,7 @@ images/racing/racing-06.png
 ```
 
 Las antiguas hojas de contacto usadas durante la generación ya se eliminaron.
-La carpeta `images/` debe contener sólo las 44 imágenes finales.
+Hay 44 PNG originales y 44 previews web derivadas de los `.watchface`.
 
 ## Watchfaces
 

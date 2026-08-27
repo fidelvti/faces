@@ -1,10 +1,10 @@
 function imageTiles(folder, prefix, count) {
   return Array.from({ length: count }, (_, index) => ({
-    image: `images/${folder}/${prefix}-${String(index + 1).padStart(2, "0")}.png`
+    image: `images/watchface-previews/${folder}/${prefix}-${String(index + 1).padStart(2, "0")}.png`
   }));
 }
 
-const watchfaceVersion = "20260827-fresh-assets-1";
+const watchfaceVersion = "20260827-web-watchface-previews-1";
 
 const collections = [
   {
@@ -56,7 +56,7 @@ const translations = {
     tagline: "Colecciones visuales diseñadas para Apple Watch.",
     imageSingular: "imagen",
     imagePlural: "imágenes",
-    weather: "Tiempo",
+    weather: "100 %",
     battery: "Batería",
     pay: " Pay",
     purchaseStatus: "✓ Tuyo.",
@@ -105,7 +105,7 @@ const translations = {
     tagline: "Visual collections designed for Apple Watch.",
     imageSingular: "image",
     imagePlural: "images",
-    weather: "Weather",
+    weather: "100 %",
     battery: "Battery",
     pay: " Pay",
     purchaseStatus: "✓ Yours.",
@@ -183,7 +183,7 @@ function closeModal(modal) {
 function watchMarkup(art, text) {
   const i18n = translations[currentLang];
   const face = typeof art === "string" ? { art } : art;
-  const artSize = face.artSize || "cover";
+  const artSize = face.artSize || "contain";
   const artPosition = face.artPosition || "center";
   const artBackground = face.image ? `url('${face.image}')` : face.art || "#000";
   return `
@@ -192,7 +192,6 @@ function watchMarkup(art, text) {
       <span class="complication top">${i18n.weather}</span>
       ${face.glyph ? `<span class="glyph" aria-hidden="true">${face.glyph}</span>` : ""}
       <span class="time">10:09</span>
-      <span class="complication bottom">${i18n.battery}</span>
     </div>
   `;
 }
@@ -213,7 +212,7 @@ function renderCatalog() {
       ${collection.arts.map((art, index) => {
         const face = typeof art === "string" ? { art } : art;
         const artBackground = face.image ? `url('${face.image}')` : face.art || "#000";
-        return `<button class="swatch" aria-label="${i18n.previewLabel} ${collection.title} ${index + 1}" data-index="${index}"><span class="art-layer" style="--artBackground:${artBackground};--artSize:${face.artSize || "cover"};--artPosition:${face.artPosition || "center"}" aria-hidden="true"></span></button>`;
+        return `<button class="swatch" aria-label="${i18n.previewLabel} ${collection.title} ${index + 1}" data-index="${index}"><span class="art-layer" style="--artBackground:${artBackground};--artSize:${face.artSize || "contain"};--artPosition:${face.artPosition || "center"}" aria-hidden="true"></span></button>`;
       }).join("")}
     </div>
     <div class="collection-foot">
@@ -235,7 +234,7 @@ function renderCatalog() {
     const face = typeof collection.arts[0] === "string" ? { art: collection.arts[0] } : collection.arts[0];
     const artBackground = face.image ? `url('${face.image}')` : face.art || "#000";
     purchasePreview.setAttribute("style", `--faceText:${collection.text};--glyphColor:${face.glyphColor || collection.text}`);
-    purchasePreview.innerHTML = `<span class="art-layer" style="--artBackground:${artBackground};--artSize:${face.artSize || "cover"};--artPosition:${face.artPosition || "center"}" aria-hidden="true"></span>${face.glyph ? `<span class="glyph" aria-hidden="true">${face.glyph}</span>` : ""}`;
+    purchasePreview.innerHTML = `<span class="art-layer" style="--artBackground:${artBackground};--artSize:${face.artSize || "contain"};--artPosition:${face.artPosition || "center"}" aria-hidden="true"></span>${face.glyph ? `<span class="glyph" aria-hidden="true">${face.glyph}</span>` : ""}`;
     if (collection.watchface) {
       addFaceLink.href = `${collection.watchface}?v=${watchfaceVersion}`;
       addFaceLink.removeAttribute("aria-disabled");
