@@ -4,6 +4,8 @@ function imageTiles(folder, prefix, count) {
   }));
 }
 
+const watchfaceVersion = "20260827-placements-2";
+
 const collections = [
   {
     title: "Black",
@@ -235,7 +237,7 @@ function renderCatalog() {
     purchasePreview.setAttribute("style", `--faceText:${collection.text};--glyphColor:${face.glyphColor || collection.text}`);
     purchasePreview.innerHTML = `<span class="art-layer" style="--artBackground:${artBackground};--artSize:${face.artSize || "cover"};--artPosition:${face.artPosition || "center"}" aria-hidden="true"></span>${face.glyph ? `<span class="glyph" aria-hidden="true">${face.glyph}</span>` : ""}`;
     if (collection.watchface) {
-      addFaceLink.href = collection.watchface;
+      addFaceLink.href = `${collection.watchface}?v=${watchfaceVersion}`;
       addFaceLink.removeAttribute("aria-disabled");
     } else {
       addFaceLink.href = "#";
