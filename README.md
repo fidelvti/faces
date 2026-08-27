@@ -36,8 +36,8 @@ http://localhost:8080
 ## Qué incluye
 
 - Catálogo visual en 2 columnas.
-- 6 colecciones.
-- 44 imágenes finales por colección y 44 previews web derivadas de los `.watchface`.
+- 8 colecciones.
+- 56 imágenes finales en total y 56 previews web derivadas de los `.watchface`.
 - Selector de idioma `ES / EN`.
 - Footer con `Términos`, `Privacidad`, `Contacto` y disclaimer de Apple.
 - Popups para la información legal sin sacar al usuario del catálogo.
@@ -50,6 +50,8 @@ http://localhost:8080
 |---|---:|---|
 | Black | 6 | `images/black/` |
 | Space | 8 | `images/space/` |
+| Ocean | 6 | `images/ocean/` |
+| Carbon | 6 | `images/carbon/` |
 | Art Deco | 6 | `images/art-deco/` |
 | Nippon | 12 | `images/nippon/` |
 | Matrix | 6 | `images/matrix/` |
@@ -66,6 +68,8 @@ http://localhost:8080
 ├── watchfaces/
 │   ├── black/
 │   ├── space/
+│   ├── ocean/
+│   ├── carbon/
 │   ├── art-deco/
 │   ├── nippon/
 │   ├── matrix/
@@ -73,6 +77,8 @@ http://localhost:8080
 └── images/
     ├── black/
     ├── space/
+    ├── ocean/
+    ├── carbon/
     ├── art-deco/
     ├── nippon/
     ├── matrix/
@@ -119,7 +125,7 @@ images/racing/racing-06.png
 ```
 
 Las antiguas hojas de contacto usadas durante la generación ya se eliminaron.
-Hay 44 PNG originales y 44 previews web derivadas de los `.watchface`.
+Hay 56 PNG originales y 56 previews web derivadas de los `.watchface`.
 
 ## Watchfaces
 
@@ -131,6 +137,8 @@ Archivos generados:
 ```text
 watchfaces/black/black.watchface
 watchfaces/space/space.watchface
+watchfaces/ocean/ocean.watchface
+watchfaces/carbon/carbon.watchface
 watchfaces/art-deco/art-deco.watchface
 watchfaces/nippon/nippon.watchface
 watchfaces/matrix/matrix.watchface

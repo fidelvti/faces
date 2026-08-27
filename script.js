@@ -22,6 +22,20 @@ const collections = [
     arts: imageTiles("space", "space", 8)
   },
   {
+    title: "Ocean",
+    count: 6,
+    text: "#f5f5f7",
+    watchface: "watchfaces/ocean/ocean.watchface",
+    arts: imageTiles("ocean", "ocean", 6)
+  },
+  {
+    title: "Carbon",
+    count: 6,
+    text: "#f5f5f7",
+    watchface: "watchfaces/carbon/carbon.watchface",
+    arts: imageTiles("carbon", "carbon", 6)
+  },
+  {
     title: "Art Deco",
     count: 6,
     text: "#f7ddb0",
