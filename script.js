@@ -4,7 +4,7 @@ function imageTiles(folder, prefix, count) {
   }));
 }
 
-const watchfaceVersion = "20260827-ocean-carbon-1";
+const watchfaceVersion = "20260827-carbon06-bg-1";
 
 const collections = [
   {
