@@ -120,25 +120,19 @@ La carpeta `images/` debe contener sólo las 52 imágenes finales.
 Prueba generada para Racing:
 
 ```text
-watchfaces/racing/racing-01.watchface
-watchfaces/racing/racing-02.watchface
-watchfaces/racing/racing-03.watchface
-watchfaces/racing/racing-04.watchface
-watchfaces/racing/racing-05.watchface
-watchfaces/racing/racing-06.watchface
+watchfaces/racing/Racing.watchface
 ```
 
-Cada archivo usa la estructura de `Fotos.watchface` y sustituye sus recursos de
-imagen por una de las seis imágenes Racing. Es una prueba de instalación de
-esferas individuales, no todavía el paquete/carrusel multimagen definitivo.
+El archivo usa la estructura de `Fotos.watchface`, cambia el nombre interno a
+`Racing` y contiene las seis imágenes de la colección Racing como una esfera
+Fotos rotatoria.
 
-Los `.watchface` de Racing se han regenerado sin complications heredadas de la
-plantilla y con previews internas nuevas basadas en la imagen Racing
-correspondiente.
+El `.watchface` de Racing se ha generado sin complications heredadas de la
+plantilla y con preview interna nueva basada en `racing-01.png`.
 
-Para probarlas:
+Para probarla:
 
-- Abrir uno de los `.watchface` en iPhone.
+- Abrir `watchfaces/racing/Racing.watchface` en iPhone.
 - Comprobar si iOS/Watch lo acepta como esfera válida.
 - Si funciona, probar la distribución web con el MIME:
 
@@ -146,9 +140,8 @@ Para probarlas:
 Content-Type: application/vnd.apple.watchface
 ```
 
-Si esta prueba funciona, el siguiente paso es crear o conseguir una plantilla
-Fotos con varias imágenes y replicar el mismo proceso para una colección
-rotatoria.
+Si esta prueba funciona, el siguiente paso es automatizar el mismo proceso para
+el resto de colecciones.
 
 ## Plan de promoción
 
