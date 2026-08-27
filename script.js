@@ -8,11 +8,11 @@ const watchfaceVersion = "20260827-nippon-even-1";
 
 const collections = [
   {
-    title: "Black",
+    title: "Matrix",
     count: 6,
-    text: "#f5f5f7",
-    watchface: "watchfaces/black/black.watchface",
-    arts: imageTiles("black", "black", 6)
+    text: "#67ff82",
+    watchface: "watchfaces/matrix/matrix.watchface",
+    arts: imageTiles("matrix", "matrix", 6)
   },
   {
     title: "Space",
@@ -36,11 +36,11 @@ const collections = [
     arts: imageTiles("nippon", "nippon", 12)
   },
   {
-    title: "Matrix",
+    title: "Black",
     count: 6,
-    text: "#67ff82",
-    watchface: "watchfaces/matrix/matrix.watchface",
-    arts: imageTiles("matrix", "matrix", 6)
+    text: "#f5f5f7",
+    watchface: "watchfaces/black/black.watchface",
+    arts: imageTiles("black", "black", 6)
   },
   {
     title: "Racing",
