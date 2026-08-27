@@ -229,7 +229,7 @@ function renderCatalog() {
     purchasePreview.setAttribute("style", `--faceText:${collection.text};--glyphColor:${face.glyphColor || collection.text}`);
     purchasePreview.innerHTML = `<span class="art-layer" style="--artBackground:${artBackground};--artSize:${face.artSize || "cover"};--artPosition:${face.artPosition || "center"}" aria-hidden="true"></span>${face.glyph ? `<span class="glyph" aria-hidden="true">${face.glyph}</span>` : ""}`;
     if (collection.title === "Racing") {
-      addFaceLink.href = "watchfaces/racing/racing-01.watchface";
+      addFaceLink.href = "watchfaces/racing/racing.watchface";
       addFaceLink.removeAttribute("aria-disabled");
     } else {
       addFaceLink.href = "#";

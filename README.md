@@ -120,11 +120,11 @@ La carpeta `images/` debe contener sólo las 52 imágenes finales.
 Prueba generada para Racing:
 
 ```text
-watchfaces/racing/racing-01.watchface
+watchfaces/racing/racing.watchface
 ```
 
 El archivo usa la estructura de `Fotos.watchface`, cambia el nombre interno a
-`Racing` y contiene las seis imágenes de la colección Racing como una esfera
+`RACING` y contiene las seis imágenes de la colección Racing como una esfera
 Fotos rotatoria.
 
 El `.watchface` de Racing se ha generado sin complications heredadas de la
@@ -132,7 +132,7 @@ plantilla y con preview interna nueva basada en `racing-01.png`.
 
 Para probarla:
 
-- Abrir `watchfaces/racing/racing-01.watchface` en iPhone.
+- Abrir `watchfaces/racing/racing.watchface` en iPhone.
 - Comprobar si iOS/Watch lo acepta como esfera válida.
 - Si funciona, probar la distribución web con el MIME:
 
