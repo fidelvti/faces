@@ -4,7 +4,7 @@ function imageTiles(folder, prefix, count) {
   }));
 }
 
-const watchfaceVersion = "20260827-web-watchface-previews-1";
+const watchfaceVersion = "20260827-nippon-even-1";
 
 const collections = [
   {
