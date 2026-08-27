@@ -150,6 +150,7 @@ const catalog = document.querySelector("#catalog");
 const purchaseModal = document.querySelector("#purchaseModal");
 const purchaseTitle = document.querySelector("#purchaseTitle");
 const purchasePreview = document.querySelector("#purchasePreview");
+const addFaceLink = document.querySelector(".add-face");
 const infoModal = document.querySelector("#infoModal");
 const infoTitle = document.querySelector("#infoTitle");
 const infoBody = document.querySelector("#infoBody");
@@ -227,6 +228,13 @@ function renderCatalog() {
     const artBackground = face.image ? `url('${face.image}')` : face.art || "#000";
     purchasePreview.setAttribute("style", `--faceText:${collection.text};--glyphColor:${face.glyphColor || collection.text}`);
     purchasePreview.innerHTML = `<span class="art-layer" style="--artBackground:${artBackground};--artSize:${face.artSize || "cover"};--artPosition:${face.artPosition || "center"}" aria-hidden="true"></span>${face.glyph ? `<span class="glyph" aria-hidden="true">${face.glyph}</span>` : ""}`;
+    if (collection.title === "Racing") {
+      addFaceLink.href = "watchfaces/racing/racing-01.watchface";
+      addFaceLink.removeAttribute("aria-disabled");
+    } else {
+      addFaceLink.href = "#";
+      addFaceLink.setAttribute("aria-disabled", "true");
+    }
     openModal(purchaseModal);
   });
 
@@ -244,7 +252,7 @@ function applyLanguage(lang) {
   document.querySelector(".brand").setAttribute("aria-label", i18n.homeLabel);
   document.querySelector(".footer-links").setAttribute("aria-label", i18n.footerLabel);
   document.querySelectorAll("[data-close]").forEach((button) => button.setAttribute("aria-label", i18n.modalClose));
-  document.querySelector(".add-face").setAttribute("aria-label", i18n.addFace);
+  addFaceLink.setAttribute("aria-label", i18n.addFace);
   langButtons.forEach((button) => {
     const active = button.dataset.lang === lang;
     button.classList.toggle("active", active);

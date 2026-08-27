@@ -63,6 +63,9 @@ http://localhost:8080
 ├── styles.css
 ├── script.js
 ├── README.md
+├── Fotos.watchface
+├── watchfaces/
+│   └── racing/
 └── images/
     ├── black/
     ├── space/
@@ -109,6 +112,39 @@ images/racing/racing-06.png
 
 Las antiguas hojas de contacto usadas durante la generación ya se eliminaron.
 La carpeta `images/` debe contener sólo las 52 imágenes finales.
+
+## Watchface
+
+`Fotos.watchface` es la plantilla real exportada desde la app Watch/Fotos.
+
+Prueba generada para Racing:
+
+```text
+watchfaces/racing/racing-01.watchface
+watchfaces/racing/racing-02.watchface
+watchfaces/racing/racing-03.watchface
+watchfaces/racing/racing-04.watchface
+watchfaces/racing/racing-05.watchface
+watchfaces/racing/racing-06.watchface
+```
+
+Cada archivo usa la estructura de `Fotos.watchface` y sustituye sus recursos de
+imagen por una de las seis imágenes Racing. Es una prueba de instalación de
+esferas individuales, no todavía el paquete/carrusel multimagen definitivo.
+
+Para probarlas:
+
+- Abrir uno de los `.watchface` en iPhone.
+- Comprobar si iOS/Watch lo acepta como esfera válida.
+- Si funciona, probar la distribución web con el MIME:
+
+```text
+Content-Type: application/vnd.apple.watchface
+```
+
+Si esta prueba funciona, el siguiente paso es crear o conseguir una plantilla
+Fotos con varias imágenes y replicar el mismo proceso para una colección
+rotatoria.
 
 ## Plan de promoción
 
@@ -188,7 +224,8 @@ Faltan para producción:
 
 - Conectar Stripe/Apple Pay real.
 - Crear la pantalla post-compra real por colección.
-- Generar/exportar los archivos `.watchface`.
+- Validar en iPhone/Apple Watch los `.watchface` generados.
+- Generar/exportar los archivos `.watchface` definitivos.
 - Servir `.watchface` con el MIME correcto:
 
 ```text
