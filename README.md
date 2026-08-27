@@ -65,6 +65,11 @@ http://localhost:8080
 ├── README.md
 ├── Fotos.watchface
 ├── watchfaces/
+│   ├── black/
+│   ├── space/
+│   ├── art-deco/
+│   ├── nippon/
+│   ├── matrix/
 │   └── racing/
 └── images/
     ├── black/
@@ -113,37 +118,46 @@ images/racing/racing-06.png
 Las antiguas hojas de contacto usadas durante la generación ya se eliminaron.
 La carpeta `images/` debe contener sólo las 52 imágenes finales.
 
-## Watchface
+## Watchfaces
 
 `Fotos.watchface` es la plantilla real exportada desde la app Watch/Fotos.
 
-Prueba generada para Racing:
+Archivos generados:
 
 ```text
+watchfaces/black/black.watchface
+watchfaces/space/space.watchface
+watchfaces/art-deco/art-deco.watchface
+watchfaces/nippon/nippon.watchface
+watchfaces/matrix/matrix.watchface
 watchfaces/racing/racing.watchface
 ```
 
-El archivo usa la estructura de `Fotos.watchface`, cambia el nombre interno a
-`RACING` y contiene las seis imágenes de la colección Racing como una esfera
-Fotos rotatoria.
+Cada archivo usa la estructura de `Fotos.watchface`, cambia el nombre interno a
+la colección correspondiente en mayúsculas y contiene todas las imágenes de esa
+colección como una esfera Fotos rotatoria.
 
-El `.watchface` de Racing se ha generado sin complications heredadas de la
-plantilla, con la hora en tamaño pequeño, con los objetos fotográficos
-recolocados más abajo dentro de los recursos internos y con preview interna
-nueva basada en `racing-01.png`.
+Los `.watchface` se han generado con la complication de batería arriba, sin la
+complication inferior heredada de la plantilla, con la hora en tamaño pequeño,
+con los objetos/artworks recolocados más abajo dentro de los recursos internos y
+con previews internas nuevas basadas en la primera imagen de cada colección.
 
-Para probarla:
+Las PNG visibles en la web no se modifican. El ajuste de posición sólo afecta a
+los JPG internos empaquetados dentro de cada `.watchface`.
 
-- Abrir `watchfaces/racing/racing.watchface` en iPhone.
+Para probarlos:
+
+- Abrir un `.watchface` en iPhone.
 - Comprobar si iOS/Watch lo acepta como esfera válida.
-- Si funciona, probar la distribución web con el MIME:
+- Probar la distribución web con el MIME:
 
 ```text
 Content-Type: application/vnd.apple.watchface
 ```
 
-Si esta prueba funciona, el siguiente paso es automatizar el mismo proceso para
-el resto de colecciones.
+Aunque se añaden campos internos `name`, `title` y `displayName`, watchOS puede
+seguir mostrando `Fotos` como nombre porque el tipo de esfera procede de la
+plantilla oficial de Fotos.
 
 ## Plan de promoción
 

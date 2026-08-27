@@ -9,36 +9,42 @@ const collections = [
     title: "Black",
     count: 6,
     text: "#f5f5f7",
+    watchface: "watchfaces/black/black.watchface",
     arts: imageTiles("black", "black", 6)
   },
   {
     title: "Space",
     count: 16,
     text: "#f5f5f7",
+    watchface: "watchfaces/space/space.watchface",
     arts: imageTiles("space", "space", 16)
   },
   {
     title: "Art Deco",
     count: 6,
     text: "#f7ddb0",
+    watchface: "watchfaces/art-deco/art-deco.watchface",
     arts: imageTiles("art-deco", "art-deco", 6)
   },
   {
     title: "Nippon",
     count: 12,
     text: "#111",
+    watchface: "watchfaces/nippon/nippon.watchface",
     arts: imageTiles("nippon", "nippon", 12)
   },
   {
     title: "Matrix",
     count: 6,
     text: "#67ff82",
+    watchface: "watchfaces/matrix/matrix.watchface",
     arts: imageTiles("matrix", "matrix", 6)
   },
   {
     title: "Racing",
     count: 6,
     text: "#f7ead5",
+    watchface: "watchfaces/racing/racing.watchface",
     arts: imageTiles("racing", "racing", 6)
   }
 ];
@@ -228,8 +234,8 @@ function renderCatalog() {
     const artBackground = face.image ? `url('${face.image}')` : face.art || "#000";
     purchasePreview.setAttribute("style", `--faceText:${collection.text};--glyphColor:${face.glyphColor || collection.text}`);
     purchasePreview.innerHTML = `<span class="art-layer" style="--artBackground:${artBackground};--artSize:${face.artSize || "cover"};--artPosition:${face.artPosition || "center"}" aria-hidden="true"></span>${face.glyph ? `<span class="glyph" aria-hidden="true">${face.glyph}</span>` : ""}`;
-    if (collection.title === "Racing") {
-      addFaceLink.href = "watchfaces/racing/racing.watchface";
+    if (collection.watchface) {
+      addFaceLink.href = collection.watchface;
       addFaceLink.removeAttribute("aria-disabled");
     } else {
       addFaceLink.href = "#";
