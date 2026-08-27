@@ -4,7 +4,7 @@ function imageTiles(folder, prefix, count) {
   }));
 }
 
-const watchfaceVersion = "20260827-live-preview-1";
+const watchfaceVersion = "20260827-all-preview-assets-1";
 
 const collections = [
   {
