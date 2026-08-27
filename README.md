@@ -253,8 +253,6 @@ Faltan para producción:
 
 - Conectar Stripe/Apple Pay real.
 - Crear la pantalla post-compra real por colección.
-- Validar en iPhone/Apple Watch los `.watchface` generados.
-- Generar/exportar los archivos `.watchface` definitivos.
 - Servir `.watchface` con el MIME correcto:
 
 ```text
