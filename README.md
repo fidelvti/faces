@@ -132,6 +132,10 @@ Cada archivo usa la estructura de `Fotos.watchface` y sustituye sus recursos de
 imagen por una de las seis imágenes Racing. Es una prueba de instalación de
 esferas individuales, no todavía el paquete/carrusel multimagen definitivo.
 
+Los `.watchface` de Racing se han regenerado sin complications heredadas de la
+plantilla y con previews internas nuevas basadas en la imagen Racing
+correspondiente.
+
 Para probarlas:
 
 - Abrir uno de los `.watchface` en iPhone.
