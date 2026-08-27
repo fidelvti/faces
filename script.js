@@ -4,7 +4,7 @@ function imageTiles(folder, prefix, count) {
   }));
 }
 
-const watchfaceVersion = "20260827-space-galaxies-2";
+const watchfaceVersion = "20260827-layout-zone-1";
 
 const collections = [
   {
