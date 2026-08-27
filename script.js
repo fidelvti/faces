@@ -4,7 +4,7 @@ function imageTiles(folder, prefix, count) {
   }));
 }
 
-const watchfaceVersion = "20260827-placements-2";
+const watchfaceVersion = "20260827-placements-3";
 
 const collections = [
   {
