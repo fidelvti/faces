@@ -145,6 +145,10 @@ con previews internas nuevas basadas en la primera imagen de cada colección.
 Las PNG visibles en la web no se modifican. El ajuste de posición sólo afecta a
 los JPG internos empaquetados dentro de cada `.watchface`.
 
+Matrix usa un tratamiento interno distinto: las imágenes del `.watchface` se
+generan a pantalla completa/full-bleed para que el arte de fósforo verde ocupe
+más superficie de la esfera.
+
 Para probarlos:
 
 - Abrir un `.watchface` en iPhone.
