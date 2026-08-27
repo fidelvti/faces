@@ -128,7 +128,9 @@ El archivo usa la estructura de `Fotos.watchface`, cambia el nombre interno a
 Fotos rotatoria.
 
 El `.watchface` de Racing se ha generado sin complications heredadas de la
-plantilla y con preview interna nueva basada en `racing-01.png`.
+plantilla, con la hora en tamaño pequeño, con los objetos fotográficos
+recolocados más abajo dentro de los recursos internos y con preview interna
+nueva basada en `racing-01.png`.
 
 Para probarla:
 
