@@ -4,7 +4,7 @@ function imageTiles(folder, prefix, count) {
   }));
 }
 
-const watchfaceVersion = "20260827-placements-3";
+const watchfaceVersion = "20260827-space-galaxies-2";
 
 const collections = [
   {
@@ -16,10 +16,10 @@ const collections = [
   },
   {
     title: "Space",
-    count: 16,
+    count: 8,
     text: "#f5f5f7",
     watchface: "watchfaces/space/space.watchface",
-    arts: imageTiles("space", "space", 16)
+    arts: imageTiles("space", "space", 8)
   },
   {
     title: "Art Deco",

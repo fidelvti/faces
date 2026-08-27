@@ -37,7 +37,7 @@ http://localhost:8080
 
 - Catálogo visual en 2 columnas.
 - 6 colecciones.
-- 52 imágenes en total.
+- 44 imágenes en total.
 - Selector de idioma `ES / EN`.
 - Footer con `Términos`, `Privacidad`, `Contacto` y disclaimer de Apple.
 - Popups para la información legal sin sacar al usuario del catálogo.
@@ -49,7 +49,7 @@ http://localhost:8080
 | Colección | Imágenes | Carpeta |
 |---|---:|---|
 | Black | 6 | `images/black/` |
-| Space | 16 | `images/space/` |
+| Space | 8 | `images/space/` |
 | Art Deco | 6 | `images/art-deco/` |
 | Nippon | 12 | `images/nippon/` |
 | Matrix | 6 | `images/matrix/` |
@@ -63,7 +63,6 @@ http://localhost:8080
 ├── styles.css
 ├── script.js
 ├── README.md
-├── Fotos.watchface
 ├── watchfaces/
 │   ├── black/
 │   ├── space/
@@ -116,11 +115,12 @@ images/racing/racing-06.png
 ```
 
 Las antiguas hojas de contacto usadas durante la generación ya se eliminaron.
-La carpeta `images/` debe contener sólo las 52 imágenes finales.
+La carpeta `images/` debe contener sólo las 44 imágenes finales.
 
 ## Watchfaces
 
-`Fotos.watchface` es la plantilla real exportada desde la app Watch/Fotos.
+Los archivos se generan a partir de una esfera Fotos exportada desde la app
+Watch y empaquetan sus propias imágenes internas.
 
 Archivos generados:
 
@@ -133,9 +133,9 @@ watchfaces/matrix/matrix.watchface
 watchfaces/racing/racing.watchface
 ```
 
-Cada archivo usa la estructura de `Fotos.watchface`, cambia el nombre interno a
-la colección correspondiente en mayúsculas y contiene todas las imágenes de esa
-colección como una esfera Fotos rotatoria.
+Cada archivo usa la estructura de una esfera Fotos, cambia el nombre interno a
+la colección correspondiente en mayúsculas cuando watchOS lo respeta y contiene
+todas las imágenes de esa colección como una esfera Fotos rotatoria.
 
 Los `.watchface` se han generado con la complication de batería arriba, sin la
 complication inferior heredada de la plantilla, con la hora en tamaño pequeño,
@@ -145,9 +145,9 @@ con previews internas nuevas basadas en la primera imagen de cada colección.
 Las PNG visibles en la web no se modifican. El ajuste de posición sólo afecta a
 los JPG internos empaquetados dentro de cada `.watchface`.
 
-Matrix usa un tratamiento interno distinto: las imágenes del `.watchface` se
-generan a pantalla completa/full-bleed para que el arte de fósforo verde ocupe
-más superficie de la esfera.
+Space y Matrix usan un tratamiento interno distinto: las imágenes del
+`.watchface` se generan a pantalla completa/full-bleed para que las galaxias y
+el arte de fósforo verde ocupen más superficie de la esfera.
 
 Para probarlos:
 
