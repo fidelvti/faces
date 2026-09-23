@@ -4,7 +4,7 @@ function imageTiles(folder, prefix, count) {
   }));
 }
 
-const watchfaceVersion = "20260923-weather-bottom-1";
+const watchfaceVersion = "20260924-weather-conditions-2";
 
 const collections = [
   {
