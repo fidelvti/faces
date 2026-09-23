@@ -4,7 +4,7 @@ function imageTiles(folder, prefix, count) {
   }));
 }
 
-const watchfaceVersion = "20260923-ocean-contrast-1";
+const watchfaceVersion = "20260923-weather-bottom-1";
 
 const collections = [
   {
@@ -70,8 +70,8 @@ const translations = {
     tagline: "Colecciones visuales diseñadas para Apple Watch.",
     imageSingular: "imagen",
     imagePlural: "imágenes",
-    weather: "100 %",
-    battery: "Batería",
+    battery: "100 %",
+    weatherConditions: "☀︎ 22° Soleado",
     pay: " Pay",
     purchaseStatus: "✓ Tuyo.",
     purchaseCopy: "Abre esta página en tu iPhone enlazado y añade la esfera al Apple Watch.",
@@ -119,8 +119,8 @@ const translations = {
     tagline: "Visual collections designed for Apple Watch.",
     imageSingular: "image",
     imagePlural: "images",
-    weather: "100 %",
-    battery: "Battery",
+    battery: "100 %",
+    weatherConditions: "☀︎ 22° Sunny",
     pay: " Pay",
     purchaseStatus: "✓ Yours.",
     purchaseCopy: "Open this page on your paired iPhone and add the face to Apple Watch.",
@@ -203,7 +203,8 @@ function watchMarkup(art, text) {
   return `
     <div class="watch" style="--faceText:${text};--glyphColor:${face.glyphColor || text}">
       <span class="art-layer" style="--artBackground:${artBackground};--artSize:${artSize};--artPosition:${artPosition}" aria-hidden="true"></span>
-      <span class="complication top">${i18n.weather}</span>
+      <span class="complication top">${i18n.battery}</span>
+      <span class="complication bottom">${i18n.weatherConditions}</span>
       ${face.glyph ? `<span class="glyph" aria-hidden="true">${face.glyph}</span>` : ""}
       <span class="time">10:09</span>
     </div>

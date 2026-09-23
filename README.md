@@ -149,8 +149,8 @@ Cada archivo usa la estructura de una esfera Fotos, cambia el nombre interno a
 la colección correspondiente en mayúsculas cuando watchOS lo respeta y contiene
 todas las imágenes de esa colección como una esfera Fotos rotatoria.
 
-Los `.watchface` se han generado con la complication de batería arriba, sin la
-complication inferior heredada de la plantilla, con la hora en tamaño pequeño,
+Los `.watchface` se han generado con la complication de batería arriba y la
+complication nativa `Tiempo > Condiciones` abajo, con la hora en tamaño pequeño,
 con los objetos/artworks recolocados más abajo dentro de los recursos internos y
 con previews internas nuevas basadas en la primera imagen de cada colección.
 
